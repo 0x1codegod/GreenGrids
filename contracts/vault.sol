@@ -10,9 +10,9 @@ contract SolarVault is ERC4626, Ownable, AccessControl {
     bytes32 public constant MANAGER_ROLE = keccak256("MANAGER_ROLE");
     bytes32 public constant TRANSACTION_ROLE = keccak256("TRANSACTION_ROLE");
 
-    uint256 public fee;  //5% is 5000bps
+    uint256 public fee;  //5% is 500bps
     uint256 public lockPeriod; // days
-    uint256 public penalty; // 5% is 5000bps
+    uint256 public penalty; // 5% is 500bps
 
     mapping(address => uint256) public depositTimestamps;
 
@@ -96,4 +96,3 @@ contract SolarVault is ERC4626, Ownable, AccessControl {
 
 
 }
-
